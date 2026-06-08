@@ -18,9 +18,10 @@ const languageToggle = document.querySelector("#language-toggle");
 
 const translations = {
   zh: {
-    pageTitle: "CJY 陈俊烨 | AI 时代作品集",
-    pageDescription: "CJY 陈俊烨的 AI 时代作品集：Vibe Coder、AI 教育系统数字化、未来课堂探索与多模态实践。",
+    pageTitle: "陈俊烨 | AI 时代作品集",
+    pageDescription: "陈俊烨的 AI 时代作品集：Vibe Coder、AI 教育系统数字化、未来课堂探索与多模态实践。",
     brand: {
+      mark: "烨",
       name: "陈俊烨"
     },
     nav: {
@@ -30,8 +31,7 @@ const translations = {
       contact: "连接"
     },
     hero: {
-      namePrimary: "CJY",
-      nameSecondary: "陈俊烨",
+      name: "陈俊烨",
       eyebrow: "AI 时代个人作品集",
       subtitle: "Vibe Coder + AI 教育系统数字化实践者 + 未来课堂探索者 + AI 多模态行动者。",
       primaryAction: "进入作品舱",
@@ -112,9 +112,10 @@ const translations = {
     }
   },
   en: {
-    pageTitle: "CJY Chen Junye | AI-era Portfolio",
-    pageDescription: "CJY Chen Junye's AI-era portfolio: Vibe Coding, AI education digital systems, future classroom exploration, and multimodal AI practice.",
+    pageTitle: "Chen Junye | AI-era Portfolio",
+    pageDescription: "Chen Junye's AI-era portfolio: Vibe Coding, AI education digital systems, future classroom exploration, and multimodal AI practice.",
     brand: {
+      mark: "烨",
       name: "Chen Junye"
     },
     nav: {
@@ -124,8 +125,7 @@ const translations = {
       contact: "Connect"
     },
     hero: {
-      namePrimary: "CJY",
-      nameSecondary: "Chen Junye",
+      name: "Chen Junye",
       eyebrow: "AI-era Personal Portfolio",
       subtitle: "Vibe Coder + AI education systems builder + future classroom explorer + multimodal AI practitioner.",
       primaryAction: "Enter Works",
@@ -253,7 +253,7 @@ function applyStaticTranslations() {
     element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel));
   });
 
-  document.querySelector("#hero-title")?.setAttribute("aria-label", `${t("hero.namePrimary")} ${t("hero.nameSecondary")}`);
+  document.querySelector("#hero-title")?.setAttribute("aria-label", t("hero.name"));
   document.body.dataset.lang = currentLanguage;
 
   if (languageToggle) {
