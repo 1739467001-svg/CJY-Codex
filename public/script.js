@@ -30,6 +30,8 @@ const translations = {
       contact: "连接"
     },
     hero: {
+      namePrimary: "CJY",
+      nameSecondary: "陈俊烨",
       eyebrow: "AI 时代个人作品集",
       subtitle: "Vibe Coder + AI 教育系统数字化实践者 + 未来课堂探索者 + AI 多模态行动者。",
       primaryAction: "进入作品舱",
@@ -122,6 +124,8 @@ const translations = {
       contact: "Connect"
     },
     hero: {
+      namePrimary: "CJY",
+      nameSecondary: "Chen Junye",
       eyebrow: "AI-era Personal Portfolio",
       subtitle: "Vibe Coder + AI education systems builder + future classroom explorer + multimodal AI practitioner.",
       primaryAction: "Enter Works",
@@ -249,6 +253,7 @@ function applyStaticTranslations() {
     element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel));
   });
 
+  document.querySelector("#hero-title")?.setAttribute("aria-label", `${t("hero.namePrimary")} ${t("hero.nameSecondary")}`);
   document.body.dataset.lang = currentLanguage;
 
   if (languageToggle) {

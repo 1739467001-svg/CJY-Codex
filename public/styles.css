@@ -275,7 +275,7 @@ button {
   position: relative;
   z-index: 1;
   align-self: center;
-  max-width: 880px;
+  max-width: min(1180px, 100%);
 }
 
 .eyebrow {
@@ -297,9 +297,30 @@ p {
 h1 {
   margin-bottom: 20px;
   font-family: var(--serif);
-  font-size: clamp(72px, 13vw, 184px);
   font-weight: 900;
   line-height: 0.92;
+}
+
+.hero-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: clamp(18px, 3.4vw, 54px);
+  row-gap: 0;
+  max-width: min(1120px, 86vw);
+  font-size: clamp(82px, 10.8vw, 176px);
+}
+
+.hero-name-part {
+  display: inline-block;
+  flex: 0 0 auto;
+  justify-self: start;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+.hero-name-cjk {
+  font-size: 0.88em;
 }
 
 .hero-subtitle {
@@ -886,10 +907,15 @@ body[data-lang="en"] .work-card h3 {
   font-family: var(--sans);
 }
 
-body[data-lang="en"] h1 {
+body[data-lang="en"] .hero-name {
   font-family: var(--sans);
-  font-size: clamp(58px, 9vw, 132px);
+  max-width: min(1060px, 82vw);
+  font-size: clamp(58px, 8.4vw, 128px);
   line-height: 0.98;
+}
+
+body[data-lang="en"] .hero-name-cjk {
+  font-size: 0.74em;
 }
 
 body[data-lang="en"] .hero-subtitle {
@@ -929,6 +955,17 @@ body[data-lang="en"] .hero-subtitle {
   .hero {
     min-height: auto;
     padding-top: clamp(42px, 7vw, 72px);
+  }
+
+  .hero-name {
+    max-width: min(860px, 100%);
+    font-size: clamp(82px, 15vw, 142px);
+    column-gap: clamp(16px, 4vw, 38px);
+  }
+
+  body[data-lang="en"] .hero-name {
+    max-width: min(840px, 100%);
+    font-size: clamp(58px, 11vw, 106px);
   }
 
   .hero-panel {
@@ -1051,15 +1088,31 @@ body[data-lang="en"] .hero-subtitle {
   }
 
   h1 {
-    font-size: clamp(58px, 20vw, 92px);
+    line-height: 0.96;
+  }
+
+  .hero-name {
+    display: grid;
+    max-width: 100%;
+    row-gap: 2px;
+    font-size: clamp(66px, 20vw, 98px);
+  }
+
+  .hero-name-cjk {
+    font-size: 0.72em;
   }
 
   .hero-subtitle {
     font-size: 23px;
   }
 
-  body[data-lang="en"] h1 {
-    font-size: clamp(46px, 16vw, 72px);
+  body[data-lang="en"] .hero-name {
+    font-size: clamp(42px, 15vw, 70px);
+    row-gap: 6px;
+  }
+
+  body[data-lang="en"] .hero-name-cjk {
+    font-size: 0.6em;
   }
 
   body[data-lang="en"] .hero-subtitle {
@@ -1212,8 +1265,16 @@ body[data-lang="en"] .hero-subtitle {
     padding: 7px 9px;
   }
 
-  h1 {
-    font-size: clamp(50px, 18vw, 72px);
+  .hero-name {
+    font-size: clamp(56px, 18vw, 74px);
+  }
+
+  .hero-name-cjk {
+    font-size: 0.7em;
+  }
+
+  body[data-lang="en"] .hero-name {
+    font-size: clamp(38px, 13vw, 54px);
   }
 
   .hero-subtitle {
