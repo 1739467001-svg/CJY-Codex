@@ -1,0 +1,16 @@
+{
+  "name": "cjy-codex-ai-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CJY 陈俊烨 AI 时代作品集展示网站",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node scripts/build.js",
+    "check": "node scripts/check.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

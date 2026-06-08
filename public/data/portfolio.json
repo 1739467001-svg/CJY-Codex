@@ -1,0 +1,196 @@
+{
+  "profile": {
+    "name": "CJY 陈俊烨",
+    "title": "Vibe Coder + AI 教育系统数字化 + 未来课堂探索 + AI 多模态",
+    "referenceSite": "https://cjy-self-production.zeabur.app",
+    "education": [
+      {
+        "label": "本科",
+        "value": "软件工程：基础编程、大数据、Web 前后端、Java"
+      },
+      {
+        "label": "研究生",
+        "value": "浙江工商大学 信电人工智能学院"
+      }
+    ]
+  },
+  "works": [
+    {
+      "title": "浙江工商大学信电智慧学院",
+      "date": "Campus System",
+      "category": ["campus"],
+      "tags": ["校园系统", "开发贡献", "数字化"],
+      "role": "角色：开发贡献者",
+      "accent": "rgba(82, 214, 200, 0.24)",
+      "description": "参与智慧学院相关系统建设，把学院内部协作、管理与服务流程转化为更可追踪的数字化能力。",
+      "url": ""
+    },
+    {
+      "title": "“未来课堂”智能体",
+      "date": "Future Classroom",
+      "category": ["education", "agent"],
+      "tags": ["未来课堂", "智能体", "AI 教育"],
+      "role": "角色：智能体开发者",
+      "accent": "rgba(216, 255, 62, 0.22)",
+      "description": "围绕课程、任务、学习支持与场景工具构建智能体，让 AI 成为课堂中的可调用基础设施。",
+      "url": ""
+    },
+    {
+      "title": "研究生院督导管理系统",
+      "date": "Graduate System",
+      "category": ["campus"],
+      "tags": ["管理系统", "Web", "研究生院"],
+      "role": "角色：系统开发者",
+      "accent": "rgba(255, 189, 74, 0.22)",
+      "description": "面向研究生院督导管理流程的系统实践，强调数据记录、流程协同与管理效率。",
+      "url": ""
+    },
+    {
+      "title": "小龙虾课程智能体群",
+      "date": "Course Agents",
+      "category": ["education", "agent"],
+      "tags": ["OpenClaw", "课程探索", "多场景"],
+      "role": "角色：与诸葛导师共同探索",
+      "accent": "rgba(255, 96, 71, 0.24)",
+      "description": "把会议室预约、智慧就业、图书馆管理、象棋指导等小龙虾智能体接入课程，形成场景化学习实验。",
+      "url": ""
+    },
+    {
+      "title": "HR AI Agent 搭建培训",
+      "date": "2026.04.27",
+      "category": ["education", "agent"],
+      "tags": ["企业培训", "HR", "AI Agent"],
+      "role": "服务对象：浙江医药股份有限公司",
+      "accent": "rgba(75, 139, 255, 0.24)",
+      "description": "面向企业 HR 场景进行 AI Agent 智能体搭建培训，连接组织流程与智能体生产力。",
+      "url": ""
+    },
+    {
+      "title": "双通班研究生 AI 助教",
+      "date": "2026.05.15 - 06.12",
+      "category": ["education"],
+      "tags": ["AI 助教", "研究生", "教学支持"],
+      "role": "角色：浙江工商大学双通班研究生 AI 助教",
+      "accent": "rgba(82, 214, 200, 0.26)",
+      "description": "在课程周期内承担 AI 助教实践，把提示词、工具链、学习反馈与课堂任务连接起来。",
+      "url": ""
+    },
+    {
+      "title": "GDPS Astron 产业智变黑客松",
+      "date": "2026.03.28",
+      "category": ["hackathon"],
+      "tags": ["一等奖", "产业智变", "Hackathon"],
+      "role": "成果：一等奖",
+      "accent": "rgba(216, 255, 62, 0.2)",
+      "description": "在产业 AI 应用命题中完成从问题理解、原型设计到交付表达的快速构建。",
+      "url": ""
+    },
+    {
+      "title": "SenseAudio & AudioClaw 技能创新赛",
+      "date": "2026.03.29",
+      "category": ["hackathon", "agent"],
+      "tags": ["二等奖", "多模态", "Audio"],
+      "role": "成果：二等奖",
+      "accent": "rgba(255, 189, 74, 0.2)",
+      "description": "围绕音频与小龙虾技能创新进行多场景探索，连接语音能力与智能体应用。",
+      "url": ""
+    }
+  ],
+  "events": [
+    {
+      "date": "2025.11.22",
+      "title": "魔搭社区开发者嘉年华，支付宝 MCP 开发黑客松",
+      "note": "第一次参加黑客松",
+      "type": "参赛者"
+    },
+    {
+      "date": "2025.11.30",
+      "title": "Way to AGI 上海站",
+      "note": "全球 30+ 城市联动，泰国清迈联动，第二次参加黑客松",
+      "type": "参赛者"
+    },
+    {
+      "date": "2026.01.08",
+      "title": "浙江工商大学 AI 应用创新大赛",
+      "note": "信电学院人工智能学院赛事",
+      "type": "一等奖",
+      "award": true
+    },
+    {
+      "date": "2026.01.16 - 01.18",
+      "title": "环球黑客松杭州站",
+      "note": "志愿者 + 参赛者双重身份",
+      "type": "志愿者 / 参赛者"
+    },
+    {
+      "date": "2026.01.22",
+      "title": "百度千帆 Agent 训练营",
+      "note": "最佳技术奖",
+      "type": "最佳技术奖",
+      "award": true
+    },
+    {
+      "date": "2026.01.23 - 01.25",
+      "title": "上海黑客松 Less is More",
+      "note": "志愿者 + 参赛者",
+      "type": "志愿者 / 参赛者"
+    },
+    {
+      "date": "2026.01.31 - 02.02",
+      "title": "南京模法学院 S2 以赛促产黑客松",
+      "note": "参与赛事服务与现场支持",
+      "type": "志愿者"
+    },
+    {
+      "date": "2026.02.07 - 02.08",
+      "title": "全国 10 城联动汤泉黑客松太原站",
+      "note": "第一次从志愿者转变为管理者视角",
+      "type": "主办方负责人"
+    },
+    {
+      "date": "2026.03.07 - 03.08",
+      "title": "中国高校联盟 AI Hackathon Tour 浙大线下复赛",
+      "note": "高校联赛物资准备与协办支持",
+      "type": "协办方"
+    },
+    {
+      "date": "2026.03.14 - 03.15",
+      "title": "中国高校联盟 AI Hackathon Tour 西安交通大学站",
+      "note": "线下复赛协办方",
+      "type": "协办方"
+    },
+    {
+      "date": "2026.03.28",
+      "title": "GDPS Astron 产业智变黑客松",
+      "note": "一等奖",
+      "type": "一等奖",
+      "award": true
+    },
+    {
+      "date": "2026.03.29",
+      "title": "上海徐汇 Agent 进化酒馆黑客松",
+      "note": "最佳人气奖",
+      "type": "最佳人气奖",
+      "award": true
+    },
+    {
+      "date": "2026.04.09",
+      "title": "小红书黑客松巅峰赛",
+      "note": "志愿者工作人员 + 参赛者",
+      "type": "工作人员 / 参赛者"
+    },
+    {
+      "date": "2026.04.23",
+      "title": "春潮 Spring 深圳 OpenClaw 黑客松",
+      "note": "参与 OpenClaw 生态相关实践",
+      "type": "参赛者"
+    },
+    {
+      "date": "2026.05.01",
+      "title": "南京 Flux 南客松 S2",
+      "note": "Life's Short, Play More 赛道银奖",
+      "type": "银奖",
+      "award": true
+    }
+  ]
+}
