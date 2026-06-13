@@ -6,6 +6,7 @@ let activePreviewWork = null;
 
 const workGrid = document.querySelector("#work-grid");
 const timelineList = document.querySelector("#timeline-list");
+const ascentLadder = document.querySelector("#ascent-ladder");
 const previewDock = document.querySelector("#preview-dock");
 const previewTitle = document.querySelector("#preview-title");
 const previewKicker = document.querySelector("#preview-kicker");
@@ -57,6 +58,17 @@ const translations = {
       body1: "我关注的是 AI 应用在真实组织中的落地：课程、会议室、就业、图书馆、督导管理、AI 助教，以及一场场黑客松带来的快速原型能力。",
       body2: "这份作品集会像一座可进入的展厅：每个作品是一块独立模块，点击后在当前页面打开内置窗口，查看网页、Demo、文档或原型，不把访客带走。"
     },
+    vectors: {
+      eyebrow: "The Loop",
+      title: "三条线不是三份简历，是同一个闭环。",
+      useLabel: "用 AI",
+      useText: "从参赛者起步，用生成式 AI 与智能体把想法在黑客松里快速跑成原型。",
+      buildLabel: "造系统",
+      buildText: "把临场能力沉淀成校园系统、课程智能体与多模态应用，能真正交付。",
+      teachLabel: "教别人",
+      teachText: "把方法带给研究生、企业 HR 与校园群体，再回到更大的场子去组织。",
+      converge: "全链路"
+    },
     works: {
       title: "作品舱",
       description: "先放入你的代表性场景，等你发送链接后，我会把每块作品接成内置预览。"
@@ -79,6 +91,13 @@ const translations = {
     },
     timeline: {
       title: "从参赛者到组织者的行动轨迹"
+    },
+    ascent: {
+      eyebrow: "Full-Chain Ascent",
+      title: "一条线，触达全部 5 个层级。",
+      reached: "已触达",
+      tierUnit: "场",
+      coverage: "层级覆盖"
     },
     service: {
       title: "志愿服务是一条很长的底层能力线。",
@@ -108,7 +127,8 @@ const translations = {
     system: {
       open: "OPEN",
       dataErrorTitle: "作品数据加载失败",
-      dataErrorRole: "请检查 /data/portfolio.json 是否存在且 JSON 格式正确。"
+      dataErrorRole: "请检查 /data/portfolio.json 是否存在且 JSON 格式正确。",
+      tierNames: ["参赛者", "志愿者", "工作人员", "协办方", "主办方"]
     }
   },
   en: {
@@ -151,6 +171,17 @@ const translations = {
       body1: "My focus is AI implementation inside real organizations: courses, meeting rooms, employment, libraries, supervision management, AI teaching support, and rapid prototyping through hackathons.",
       body2: "This portfolio works like an explorable exhibition. Each work is an independent block; clicking opens an embedded preview window on the same page for websites, demos, documents, or prototypes."
     },
+    vectors: {
+      eyebrow: "The Loop",
+      title: "Three lines, not three resumes — one closed loop.",
+      useLabel: "Use AI",
+      useText: "Starting as a participant, turning ideas into working prototypes at hackathons with generative AI and agents.",
+      buildLabel: "Build Systems",
+      buildText: "Turning on-the-spot skill into campus systems, course agents, and multimodal apps that actually ship.",
+      teachLabel: "Teach Others",
+      teachText: "Bringing the method to graduate students, corporate HR, and campus groups — then organizing at a larger scale.",
+      converge: "Full Chain"
+    },
     works: {
       title: "Work Bay",
       description: "Representative scenarios are placed here first. When links are added, each block becomes an embedded preview."
@@ -173,6 +204,13 @@ const translations = {
     },
     timeline: {
       title: "From participant to organizer: a field trajectory"
+    },
+    ascent: {
+      eyebrow: "Full-Chain Ascent",
+      title: "One trajectory reaching all 5 tiers.",
+      reached: "Reached",
+      tierUnit: "events",
+      coverage: "Tier coverage"
     },
     service: {
       title: "Volunteer service has been a long-running foundation.",
@@ -202,10 +240,43 @@ const translations = {
     system: {
       open: "OPEN",
       dataErrorTitle: "Failed to load portfolio data",
-      dataErrorRole: "Please check that /data/portfolio.json exists and contains valid JSON."
+      dataErrorRole: "Please check that /data/portfolio.json exists and contains valid JSON.",
+      tierNames: ["Participant", "Volunteer", "Staff", "Co-organizer", "Organizer"]
     }
   }
 };
+
+const prefersReducedMotion =
+  typeof window.matchMedia === "function" &&
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const revealObserver =
+  !prefersReducedMotion && typeof IntersectionObserver === "function"
+    ? new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
+      )
+    : null;
+
+function observeReveals(nodes) {
+  const items = [...nodes];
+  items.forEach((node, index) => {
+    node.classList.add("reveal");
+    if (!revealObserver) {
+      node.classList.add("is-visible");
+      return;
+    }
+    node.style.setProperty("--reveal-delay", `${Math.min(index, 8) * 55}ms`);
+    revealObserver.observe(node);
+  });
+}
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -236,6 +307,29 @@ function tagMarkup(tags = []) {
   return localized(tags)
     .map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`)
     .join("");
+}
+
+// Organizational tier inferred from the event role (1 = participant … 5 = organizer).
+// Derived from the Chinese role string so the timeline stays the single source of truth.
+const TIER_COUNT = 5;
+
+function rankOf(event) {
+  const role = event?.type?.zh || "";
+  if (/主办|负责/.test(role)) return 5;
+  if (/协办/.test(role)) return 4;
+  if (/工作人员/.test(role)) return 3;
+  if (/志愿/.test(role)) return 2;
+  return 1;
+}
+
+function tierName(rank) {
+  return t("system.tierNames")[rank - 1] ?? "";
+}
+
+function rankMeterMarkup(rank) {
+  return Array.from({ length: TIER_COUNT }, (_, i) =>
+    `<span class="meter-seg${i < rank ? " on" : ""}"></span>`
+  ).join("");
 }
 
 function applyStaticTranslations() {
@@ -295,23 +389,82 @@ function renderWorks(filter = activeFilter) {
     const work = visibleWorks[Number(card.dataset.index)];
     card.addEventListener("click", () => openPreview(work));
   });
+
+  observeReveals(workGrid.querySelectorAll(".work-card"));
+}
+
+function renderLadder() {
+  if (!ascentLadder) {
+    return;
+  }
+
+  const counts = Array.from({ length: TIER_COUNT }, () => 0);
+  events.forEach((event) => {
+    counts[rankOf(event) - 1] += 1;
+  });
+  const peak = counts.reduce((max, count, i) => (count > 0 ? i + 1 : max), 0);
+  const reachedTiers = counts.filter((count) => count > 0).length;
+  const maxCount = Math.max(1, ...counts);
+
+  const tiers = Array.from({ length: TIER_COUNT }, (_, i) => TIER_COUNT - i)
+    .map((rank) => {
+      const count = counts[rank - 1];
+      const fill = count ? Math.max(0.18, count / maxCount) : 0;
+      const isPeak = rank === peak;
+      const isReached = count > 0;
+      return `
+        <div class="ascent-tier${isReached ? " reached" : ""}${isPeak ? " peak" : ""}" data-rank="${rank}">
+          <span class="tier-rank">L${rank}</span>
+          <span class="tier-name">${escapeHtml(tierName(rank))}</span>
+          <span class="tier-track"><span class="tier-fill" style="--fill: ${fill}"></span></span>
+          <span class="tier-count">${count ? `${count} ${escapeHtml(t("ascent.tierUnit"))}` : "—"}</span>
+          ${isPeak ? `<span class="tier-flag">${escapeHtml(t("ascent.reached"))}</span>` : ""}
+        </div>
+      `;
+    })
+    .join("");
+
+  ascentLadder.innerHTML = `
+    <div class="ascent-head">
+      <div>
+        <p class="eyebrow">${escapeHtml(t("ascent.eyebrow"))}</p>
+        <h3>${escapeHtml(t("ascent.title"))}</h3>
+      </div>
+      <div class="ascent-coverage">
+        <strong>${reachedTiers}/${TIER_COUNT}</strong>
+        <span>${escapeHtml(t("ascent.coverage"))}</span>
+      </div>
+    </div>
+    <div class="ascent-tiers">${tiers}</div>
+  `;
+
+  observeReveals(ascentLadder.querySelectorAll(".ascent-tier"));
 }
 
 function renderTimeline() {
+  renderLadder();
+
   timelineList.innerHTML = events
-    .map(
-      (event) => `
-        <article class="timeline-item ${event.award ? "award" : ""}">
+    .map((event) => {
+      const rank = rankOf(event);
+      return `
+        <article class="timeline-item ${event.award ? "award" : ""}" data-rank="${rank}">
           <div class="timeline-topline">
             <span class="timeline-date">${escapeHtml(localized(event.date))}</span>
             <span class="timeline-type">${escapeHtml(localized(event.type))}</span>
           </div>
           <h3>${escapeHtml(localized(event.title))}</h3>
           <p>${escapeHtml(localized(event.note))}</p>
+          <div class="timeline-rank" aria-label="${escapeHtml(tierName(rank))}">
+            <span class="rank-meter">${rankMeterMarkup(rank)}</span>
+            <span class="rank-label">${escapeHtml(tierName(rank))}</span>
+          </div>
         </article>
-      `
-    )
+      `;
+    })
     .join("");
+
+  observeReveals(timelineList.querySelectorAll(".timeline-item"));
 }
 
 function openPreview(work) {
@@ -404,6 +557,7 @@ function renderError(error) {
 async function init() {
   bindInteractions();
   applyStaticTranslations();
+  observeReveals(document.querySelectorAll("[data-reveal]"));
 
   try {
     const response = await fetch("/data/portfolio.json");
