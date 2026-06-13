@@ -71,7 +71,7 @@ const translations = {
     },
     works: {
       title: "作品舱",
-      description: "先放入你的代表性场景，等你发送链接后，我会把每块作品接成内置预览。"
+      description: "每个作品是一块独立模块，点击即可在内置窗口中预览网页、Demo 或原型。"
     },
     filters: {
       all: "全部",
@@ -104,13 +104,13 @@ const translations = {
       text: "初中图书馆志愿者，高中博物馆志愿者，本科雷锋队队长，考研阶段古建筑博物馆实习，研究生阶段全链路参与 AI 活动与 AI 黑客松。"
     },
     contact: {
-      title: "把你的作品链接发给我。",
-      text: "每个链接我会整理成作品块：标题、简介、标签、角色、成果、内置预览窗口。若某些网站禁止 iframe 嵌入，我会给它做一个漂亮的封面状态和备用打开方式。"
+      title: "想连接，欢迎随时。",
+      text: "如果你也在做 AI 教育、智能体或黑客松，欢迎交流与合作。更多内容可见上方「参考个人站」。"
     },
     preview: {
       title: "作品预览",
-      placeholderTitle: "等待作品链接接入",
-      placeholderText: "你发送链接后，这里会以内置窗口展示你的网页或 Demo。"
+      placeholderTitle: "预览即将上线",
+      placeholderText: "该作品的内置预览正在接入，敬请期待。"
     },
     aria: {
       mainNav: "主导航",
@@ -184,7 +184,7 @@ const translations = {
     },
     works: {
       title: "Work Bay",
-      description: "Representative scenarios are placed here first. When links are added, each block becomes an embedded preview."
+      description: "Each work is an independent block — click to preview the website, demo, or prototype inside the embedded window."
     },
     filters: {
       all: "All",
@@ -217,13 +217,13 @@ const translations = {
       text: "Library volunteer in middle school, museum volunteer in high school, Lei Feng Team captain as an undergraduate, ancient architecture museum intern during exam preparation, and full-chain AI event involvement as a graduate student."
     },
     contact: {
-      title: "Send me your work links.",
-      text: "Each link can become a work block with title, summary, tags, role, result, and an embedded preview. If a site blocks iframe embedding, the block can use a polished cover state with a backup open action."
+      title: "Open to connect.",
+      text: "If you also work on AI education, agents, or hackathons, let's talk. See the reference site above for more."
     },
     preview: {
       title: "Work Preview",
-      placeholderTitle: "Waiting for work links",
-      placeholderText: "After links are added, your website or demo will appear here inside the embedded preview window."
+      placeholderTitle: "Preview coming soon",
+      placeholderText: "The embedded preview for this work is being wired up — stay tuned."
     },
     aria: {
       mainNav: "Main navigation",
