@@ -7,6 +7,7 @@ const requiredFiles = [
   "public/index.html",
   "public/styles.css",
   "public/script.js",
+  "public/favicon.svg",
   "public/assets/hero-lab.png",
   "public/data/portfolio.json",
   "server.js",

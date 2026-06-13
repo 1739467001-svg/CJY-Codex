@@ -560,7 +560,7 @@ async function init() {
   observeReveals(document.querySelectorAll("[data-reveal]"));
 
   try {
-    const response = await fetch("/data/portfolio.json");
+    const response = await fetch("data/portfolio.json");
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }

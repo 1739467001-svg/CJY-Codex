@@ -17,11 +17,15 @@ CJY 陈俊烨的 AI 时代个人作品集展示网站。
 
 ```text
 .
+├── .github
+│   └── workflows
+│       └── deploy.yml
 ├── public
 │   ├── assets
 │   │   └── hero-lab.png
 │   ├── data
 │   │   └── portfolio.json
+│   ├── favicon.svg
 │   ├── index.html
 │   ├── script.js
 │   └── styles.css
@@ -32,6 +36,19 @@ CJY 陈俊烨的 AI 时代个人作品集展示网站。
 ├── package.json
 └── Dockerfile
 ```
+
+## 页面结构
+
+- Hero：姓名、定位、Profile Kernel 档案卡
+- 关键数字带：AI 活动、系统场景、全链路角色
+- 能力闭环：用 AI → 造系统 → 教别人 → 全链路（三向量）
+- 作品舱：可筛选的作品块 + 内置 iframe 预览
+- 未来课堂：课程智能体、AI 助教、组织培训
+- 全链路 Ascent：从时间线自动汇总角色层级（L1 参赛者 → L5 主办方）
+- 行动轨迹：黑客松时间线，每条带层级标识
+- 志愿服务、连接
+
+页面在滚动时会逐块进场（尊重 `prefers-reduced-motion`），零第三方依赖。
 
 ## 本地运行
 
@@ -77,6 +94,18 @@ npm run build
 ```
 
 然后把 `dist/` 作为静态目录部署。
+
+## GitHub Pages 自动部署
+
+仓库内置 `.github/workflows/deploy.yml`：推送到部署分支或 `main` 时，会自动 `npm run build` 并发布 `dist/` 到 GitHub Pages。
+
+首次部署需要在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**（工作流也会尝试自动开启）。发布后地址形如：
+
+```text
+https://<用户名>.github.io/CJY-Codex/
+```
+
+> 站内静态资源全部使用相对路径，因此既能在根路径运行，也能在 Pages 的子路径下正常加载。
 
 ## 更新作品
 

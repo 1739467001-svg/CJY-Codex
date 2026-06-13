@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="12" fill="#12130f"/>
+  <rect x="3.5" y="3.5" width="57" height="57" rx="9" fill="none" stroke="#d8ff3e" stroke-opacity="0.55" stroke-width="1.5"/>
+  <text x="50%" y="52%" dominant-baseline="central" text-anchor="middle"
+        font-family="'Noto Serif SC', serif" font-weight="700" font-size="38" fill="#d8ff3e">烨</text>
+</svg>
