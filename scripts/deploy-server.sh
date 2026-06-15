@@ -41,6 +41,7 @@ fi
 # Start detached so it survives logout.
 nohup env PORT="$PORT" HOST=0.0.0.0 node server.js > "$DIR/site.log" 2>&1 &
 echo $! > "$DIR/.serverpid"
+echo "$PORT" > "$DIR/.serverport"
 sleep 1
 
 IP="$(curl -fsS --max-time 4 ifconfig.me 2>/dev/null || hostname -I 2>/dev/null | awk '{print $1}')"
