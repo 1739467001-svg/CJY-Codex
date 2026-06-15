@@ -89,7 +89,7 @@
         "zh": "成都天府国际机场的三维数字孪生，沉浸式还原航站楼与空侧布局。",
         "en": "A 3D digital twin of Chengdu Tianfu International Airport, reconstructing terminal and airside layouts."
       },
-      "url": "http://aerotwin-tfu.vercel.app/"
+      "url": "https://aerotwin-tfu.vercel.app/"
     },
     {
       "title": { "zh": "虚拟看房 / 样板间漫游", "en": "Virtual Home Tour" },
