@@ -1,7 +1,7 @@
 name: Deploy to Server (SSH)
 
-# Deploys the static site onto a self-managed Linux server over SSH.
-# Credentials are read from repository secrets:
+# Deploys the static site onto a self-managed Linux server over SSH as a
+# persistent systemd service. Credentials come from repository secrets:
 #   SERVER_HOST, SERVER_USER, SERVER_PORT, SERVER_PASSWORD
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
       port:
         description: "Port for the site to listen on"
         required: false
-        default: "8090"
+        default: "8092"
 
 jobs:
   deploy:
@@ -26,22 +26,40 @@ jobs:
           script: |
             set -e
             export PATH="$PATH:/usr/local/bin:/usr/bin"
+            PORT="${{ github.event.inputs.port }}"
+            [ -n "$PORT" ] || PORT=8092
+
             if ! command -v node >/dev/null 2>&1; then
               echo "Installing Node.js 20..."
               curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
               sudo apt-get install -y nodejs
             fi
             echo "node $(node -v)"
+
             if [ -d "$HOME/CJY-Codex/.git" ]; then
               git -C "$HOME/CJY-Codex" pull --ff-only
             else
               git clone https://github.com/1739467001-svg/CJY-Codex.git "$HOME/CJY-Codex"
             fi
             cd "$HOME/CJY-Codex"
-            bash scripts/deploy-server.sh "${{ github.event.inputs.port }}"
-            sleep 2
-            PORT="$(cat "$HOME/CJY-Codex/.serverport")"
+
+            # Stop any previous nohup instance so the port frees up for systemd.
+            if [ -f .serverpid ]; then kill "$(cat .serverpid)" 2>/dev/null || true; rm -f .serverpid; fi
+
+            echo "=== listening ports (before) ==="
+            { sudo -n ss -ltnp 2>/dev/null || ss -ltn; } | grep -E ":80[0-9][0-9]" || echo "(none in 8000-8099)"
+
+            if sudo -n true 2>/dev/null; then
+              bash scripts/install-systemd.sh "$PORT"
+            else
+              echo "No passwordless sudo; falling back to setsid + linger."
+              loginctl enable-linger "$(whoami)" 2>/dev/null || true
+              setsid env PORT="$PORT" HOST=0.0.0.0 node server.js > "$HOME/CJY-Codex/site.log" 2>&1 < /dev/null &
+              echo $! > "$HOME/CJY-Codex/.serverpid"
+              sleep 2
+            fi
+
+            echo "=== listening ports (after) ==="
+            { sudo -n ss -ltnp 2>/dev/null || ss -ltn; } | grep -E ":$PORT\b" || echo "(nothing on :$PORT)"
             echo "Health check on 127.0.0.1:$PORT"
             curl -fsS -o /dev/null -w "HTTP %{http_code}\n" "http://127.0.0.1:$PORT/"
-            echo "----- last log lines -----"
-            tail -n 8 "$HOME/CJY-Codex/site.log" || true
