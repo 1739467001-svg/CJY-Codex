@@ -20,7 +20,7 @@ const languageToggle = document.querySelector("#language-toggle");
 
 const translations = {
   zh: {
-    pageTitle: "陈俊烨 | AI 时代作品集",
+    pageTitle: "烨 · YE | 陈俊烨 AI 时代作品集",
     pageDescription: "陈俊烨的 AI 时代作品集：Vibe Coder、AI 教育系统数字化、未来课堂探索与多模态实践。",
     brand: {
       mark: "烨",
@@ -135,7 +135,7 @@ const translations = {
     }
   },
   en: {
-    pageTitle: "Chen Junye | AI-era Portfolio",
+    pageTitle: "YE · 烨 | Chen Junye AI Portfolio",
     pageDescription: "Chen Junye's AI-era portfolio: Vibe Coding, AI education digital systems, future classroom exploration, and multimodal AI practice.",
     brand: {
       mark: "烨",
