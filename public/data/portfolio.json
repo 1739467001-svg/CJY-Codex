@@ -11,20 +11,14 @@
     "referenceSite": "https://cjy-self-production.zeabur.app",
     "education": [
       {
-        "label": {
-          "zh": "本科",
-          "en": "Undergraduate"
-        },
+        "label": { "zh": "本科", "en": "Undergraduate" },
         "value": {
           "zh": "软件工程：基础编程、大数据、Web 前后端、Java",
           "en": "Software Engineering: programming fundamentals, big data, web frontend/backend, Java"
         }
       },
       {
-        "label": {
-          "zh": "研究生",
-          "en": "Graduate"
-        },
+        "label": { "zh": "研究生", "en": "Graduate" },
         "value": {
           "zh": "浙江工商大学 信电人工智能学院",
           "en": "School of Information Engineering and AI, Zhejiang Gongshang University"
@@ -34,481 +28,254 @@
   },
   "works": [
     {
-      "title": {
-        "zh": "浙江工商大学信电智慧学院",
-        "en": "ZJGSU Smart Information Engineering College"
-      },
-      "date": {
-        "zh": "校园系统",
-        "en": "Campus System"
-      },
-      "category": ["campus"],
+      "title": { "zh": "智慧港口数字孪生", "en": "Smart Port Digital Twin" },
+      "date": { "zh": "数字孪生 · 多模态", "en": "Digital Twin · Multimodal" },
+      "category": ["twin"],
       "tags": {
-        "zh": ["校园系统", "开发贡献", "数字化"],
-        "en": ["Campus System", "Development", "Digitalization"]
+        "zh": ["数字孪生", "港口物流", "3D 可视化"],
+        "en": ["Digital Twin", "Port Logistics", "3D Viz"]
       },
-      "role": {
-        "zh": "角色：开发贡献者",
-        "en": "Role: Development contributor"
-      },
-      "accent": "rgba(82, 214, 200, 0.24)",
-      "description": {
-        "zh": "参与智慧学院相关系统建设，把学院内部协作、管理与服务流程转化为更可追踪的数字化能力。",
-        "en": "Contributed to smart college systems that turn internal collaboration, management, and services into traceable digital workflows."
-      },
-      "url": ""
-    },
-    {
-      "title": {
-        "zh": "“未来课堂”智能体",
-        "en": "Future Classroom Agents"
-      },
-      "date": {
-        "zh": "未来课堂",
-        "en": "Future Classroom"
-      },
-      "category": ["education", "agent"],
-      "tags": {
-        "zh": ["未来课堂", "智能体", "AI 教育"],
-        "en": ["Future Classroom", "Agents", "AI Education"]
-      },
-      "role": {
-        "zh": "角色：智能体开发者",
-        "en": "Role: Agent developer"
-      },
-      "accent": "rgba(216, 255, 62, 0.22)",
-      "description": {
-        "zh": "围绕课程、任务、学习支持与场景工具构建智能体，让 AI 成为课堂中的可调用基础设施。",
-        "en": "Built agents around courses, tasks, learning support, and scenario tools so AI can become callable classroom infrastructure."
-      },
-      "url": ""
-    },
-    {
-      "title": {
-        "zh": "研究生院督导管理系统",
-        "en": "Graduate School Supervision Management System"
-      },
-      "date": {
-        "zh": "研究生院系统",
-        "en": "Graduate System"
-      },
-      "category": ["campus"],
-      "tags": {
-        "zh": ["管理系统", "Web", "研究生院"],
-        "en": ["Management System", "Web", "Graduate School"]
-      },
-      "role": {
-        "zh": "角色：系统开发者",
-        "en": "Role: System developer"
-      },
-      "accent": "rgba(255, 189, 74, 0.22)",
-      "description": {
-        "zh": "面向研究生院督导管理流程的系统实践，强调数据记录、流程协同与管理效率。",
-        "en": "A system practice for graduate school supervision workflows, focused on records, coordination, and management efficiency."
-      },
-      "url": ""
-    },
-    {
-      "title": {
-        "zh": "小龙虾课程智能体群",
-        "en": "OpenClaw Course Agent Cluster"
-      },
-      "date": {
-        "zh": "课程智能体",
-        "en": "Course Agents"
-      },
-      "category": ["education", "agent"],
-      "tags": {
-        "zh": ["OpenClaw", "课程探索", "多场景"],
-        "en": ["OpenClaw", "Course Lab", "Multi-scenario"]
-      },
-      "role": {
-        "zh": "角色：与诸葛导师共同探索",
-        "en": "Role: Exploration with Mentor Zhuge"
-      },
-      "accent": "rgba(255, 96, 71, 0.24)",
-      "description": {
-        "zh": "把会议室预约、智慧就业、图书馆管理、象棋指导等小龙虾智能体接入课程，形成场景化学习实验。",
-        "en": "Connected meeting-room booking, smart employment, library management, and chess coaching agents into course experiments."
-      },
-      "url": ""
-    },
-    {
-      "title": {
-        "zh": "HR AI Agent 搭建培训",
-        "en": "HR AI Agent Building Workshop"
-      },
-      "date": {
-        "zh": "2026.04.27",
-        "en": "Apr 27, 2026"
-      },
-      "category": ["education", "agent"],
-      "tags": {
-        "zh": ["企业培训", "HR", "AI Agent"],
-        "en": ["Corporate Training", "HR", "AI Agent"]
-      },
-      "role": {
-        "zh": "服务对象：浙江医药股份有限公司",
-        "en": "Audience: Zhejiang Medicine Co., Ltd."
-      },
-      "accent": "rgba(75, 139, 255, 0.24)",
-      "description": {
-        "zh": "面向企业 HR 场景进行 AI Agent 智能体搭建培训，连接组织流程与智能体生产力。",
-        "en": "Delivered AI Agent building training for HR scenarios, connecting organizational workflows with agent-powered productivity."
-      },
-      "url": ""
-    },
-    {
-      "title": {
-        "zh": "双通班研究生 AI 助教",
-        "en": "Graduate AI Teaching Assistant"
-      },
-      "date": {
-        "zh": "2026.05.15 - 06.12",
-        "en": "May 15 - Jun 12, 2026"
-      },
-      "category": ["education"],
-      "tags": {
-        "zh": ["AI 助教", "研究生", "教学支持"],
-        "en": ["AI TA", "Graduate Students", "Learning Support"]
-      },
-      "role": {
-        "zh": "角色：浙江工商大学双通班研究生 AI 助教",
-        "en": "Role: AI teaching assistant for ZJGSU graduate students"
-      },
+      "role": { "zh": "角色：Vibe Coder / 独立构建", "en": "Role: Vibe Coder / solo build" },
       "accent": "rgba(82, 214, 200, 0.26)",
       "description": {
-        "zh": "在课程周期内承担 AI 助教实践，把提示词、工具链、学习反馈与课堂任务连接起来。",
-        "en": "Worked as an AI TA during the course cycle, connecting prompting, toolchains, learning feedback, and classroom tasks."
+        "zh": "用数字孪生还原港口货运调度，实时可视化集装箱、泊位与物流流转的全景。",
+        "en": "A digital twin of port cargo operations, visualizing containers, berths, and logistics flow in real time."
       },
-      "url": ""
+      "url": "https://cargo-claw.vercel.app"
     },
     {
-      "title": {
-        "zh": "GDPS Astron 产业智变黑客松",
-        "en": "GDPS Astron Industrial Intelligence Hackathon"
-      },
-      "date": {
-        "zh": "2026.03.28",
-        "en": "Mar 28, 2026"
-      },
-      "category": ["hackathon"],
+      "title": { "zh": "太阳系模拟与漫游", "en": "Solar System Simulation & Flythrough" },
+      "date": { "zh": "WebGL · 多模态", "en": "WebGL · Multimodal" },
+      "category": ["twin"],
       "tags": {
-        "zh": ["一等奖", "产业智变", "Hackathon"],
-        "en": ["First Prize", "Industrial AI", "Hackathon"]
+        "zh": ["太阳系", "WebGL", "交互漫游"],
+        "en": ["Solar System", "WebGL", "Flythrough"]
       },
-      "role": {
-        "zh": "成果：一等奖",
-        "en": "Result: First Prize"
+      "role": { "zh": "角色：Vibe Coder / 独立构建", "en": "Role: Vibe Coder / solo build" },
+      "accent": "rgba(75, 139, 255, 0.26)",
+      "description": {
+        "zh": "可自由漫游的太阳系模型，交互式呈现行星轨道、尺度与运动关系。",
+        "en": "A free-roam solar system where planetary orbits, scale, and motion become interactive."
       },
+      "url": "https://virtual-universe-eight.vercel.app"
+    },
+    {
+      "title": { "zh": "海上油田数字孪生", "en": "Offshore Oilfield Digital Twin" },
+      "date": { "zh": "工业可视化", "en": "Industrial Viz" },
+      "category": ["twin"],
+      "tags": {
+        "zh": ["海上油田", "数字孪生", "工业仿真"],
+        "en": ["Offshore Rig", "Digital Twin", "Industrial Sim"]
+      },
+      "role": { "zh": "角色：Vibe Coder / 独立构建", "en": "Role: Vibe Coder / solo build" },
+      "accent": "rgba(82, 214, 200, 0.22)",
+      "description": {
+        "zh": "海上钻井平台的视觉模拟，还原设备布局与作业场景的数字孪生体。",
+        "en": "A visual simulation of an offshore drilling platform — a digital twin of its layout and operations."
+      },
+      "url": "https://deepblue-rig.vercel.app"
+    },
+    {
+      "title": { "zh": "天府国际机场数字孪生", "en": "Tianfu Airport Digital Twin" },
+      "date": { "zh": "成都 · 数字孪生", "en": "Chengdu · Digital Twin" },
+      "category": ["twin"],
+      "tags": {
+        "zh": ["机场", "数字孪生", "3D"],
+        "en": ["Airport", "Digital Twin", "3D"]
+      },
+      "role": { "zh": "角色：Vibe Coder / 独立构建", "en": "Role: Vibe Coder / solo build" },
+      "accent": "rgba(255, 189, 74, 0.22)",
+      "description": {
+        "zh": "成都天府国际机场的三维数字孪生，沉浸式还原航站楼与空侧布局。",
+        "en": "A 3D digital twin of Chengdu Tianfu International Airport, reconstructing terminal and airside layouts."
+      },
+      "url": "http://aerotwin-tfu.vercel.app/"
+    },
+    {
+      "title": { "zh": "虚拟看房 / 样板间漫游", "en": "Virtual Home Tour" },
+      "date": { "zh": "空间 · 漫游", "en": "Spatial · Walkthrough" },
+      "category": ["twin"],
+      "tags": {
+        "zh": ["虚拟看房", "第一人称漫游", "空间"],
+        "en": ["Virtual Tour", "First-person", "Space"]
+      },
+      "role": { "zh": "角色：Vibe Coder / 独立构建", "en": "Role: Vibe Coder / solo build" },
+      "accent": "rgba(255, 96, 71, 0.22)",
+      "description": {
+        "zh": "样板间的第一人称虚拟漫游，自由走查空间布局、动线与材质。",
+        "en": "A first-person virtual walkthrough of a model home — explore layout, flow, and materials freely."
+      },
+      "url": "https://virtual-reality-mocha.vercel.app/"
+    },
+    {
+      "title": { "zh": "会议室预约虾", "en": "Meeting-Room Booking Shrimp" },
+      "date": { "zh": "小龙虾课程矩阵", "en": "OpenClaw Course Cluster" },
+      "category": ["agent", "campus"],
+      "tags": {
+        "zh": ["小龙虾", "会议室预约", "智能体"],
+        "en": ["OpenClaw", "Room Booking", "Agent"]
+      },
+      "role": { "zh": "角色：小龙虾课程场景开发", "en": "Role: OpenClaw course-scenario dev" },
+      "accent": "rgba(216, 255, 62, 0.22)",
+      "description": {
+        "zh": "小龙虾课程矩阵的一员——把会议室预约做成可对话、可调度的智能体应用。与会议室预约虾并行的，还有智慧就业虾、图书馆管理虾、象棋指导虾。",
+        "en": "Part of the OpenClaw course cluster — meeting-room booking as a conversational, schedulable agent, alongside employment, library, and chess-coaching shrimp agents."
+      },
+      "url": "https://meetroomshrimp-gvfhrxz8.manus.space"
+    },
+    {
+      "title": { "zh": "研究生院督导管理系统", "en": "Graduate Supervision System" },
+      "date": { "zh": "校园系统", "en": "Campus System" },
+      "category": ["campus"],
+      "tags": {
+        "zh": ["管理系统", "研究生院", "Web"],
+        "en": ["Management System", "Graduate School", "Web"]
+      },
+      "role": { "zh": "角色：系统开发者", "en": "Role: System developer" },
+      "accent": "rgba(75, 139, 255, 0.22)",
+      "description": {
+        "zh": "为研究生院督导流程构建的管理系统，覆盖记录、协同与管理效率。http 内网部署，建议在新窗口打开。",
+        "en": "A management system for graduate-school supervision workflows — records, coordination, efficiency. http deployment, best opened in a new window."
+      },
+      "url": "http://121.196.217.243/login"
+    },
+    {
+      "title": { "zh": "首届 AI 黑客松大赛作品展", "en": "First AI Hackathon Showcase" },
+      "date": { "zh": "校内赛事 · 2026.06", "en": "Campus Event · Jun 2026" },
+      "category": ["campus", "hackathon"],
+      "tags": {
+        "zh": ["作品展", "校内黑客松", "宣传落地"],
+        "en": ["Showcase", "Campus Hackathon", "Launch Design"]
+      },
+      "role": { "zh": "角色：宣传落地与设计", "en": "Role: launch & design" },
       "accent": "rgba(216, 255, 62, 0.2)",
       "description": {
-        "zh": "在产业 AI 应用命题中完成从问题理解、原型设计到交付表达的快速构建。",
-        "en": "Rapidly moved from problem framing to prototype design and delivery storytelling in an industrial AI challenge."
+        "zh": "浙江工商大学信电学院、人工智能学院首届 AI 黑客松大赛的学生作品展示站。http 部署，建议在新窗口打开。",
+        "en": "Student showcase for ZJGSU's first AI Hackathon, hosted by the School of Information Engineering and AI. http deployment, best opened in a new window."
       },
-      "url": ""
-    },
-    {
-      "title": {
-        "zh": "SenseAudio & AudioClaw 技能创新赛",
-        "en": "SenseAudio & AudioClaw Skills Innovation Challenge"
-      },
-      "date": {
-        "zh": "2026.03.29",
-        "en": "Mar 29, 2026"
-      },
-      "category": ["hackathon", "agent"],
-      "tags": {
-        "zh": ["二等奖", "多模态", "Audio"],
-        "en": ["Second Prize", "Multimodal", "Audio"]
-      },
-      "role": {
-        "zh": "成果：二等奖",
-        "en": "Result: Second Prize"
-      },
-      "accent": "rgba(255, 189, 74, 0.2)",
-      "description": {
-        "zh": "围绕音频与小龙虾技能创新进行多场景探索，连接语音能力与智能体应用。",
-        "en": "Explored multi-scenario skill innovation around audio and OpenClaw, connecting voice capabilities with agent applications."
-      },
-      "url": ""
+      "url": "http://43.133.22.250:8089/"
     }
   ],
   "events": [
     {
-      "date": {
-        "zh": "2025.11.22",
-        "en": "Nov 22, 2025"
-      },
-      "title": {
-        "zh": "魔搭社区开发者嘉年华，支付宝 MCP 开发黑客松",
-        "en": "ModelScope Developer Carnival, Alipay MCP Hackathon"
-      },
-      "note": {
-        "zh": "第一次参加黑客松",
-        "en": "First hackathon experience"
-      },
-      "type": {
-        "zh": "参赛者",
-        "en": "Participant"
-      }
+      "date": { "zh": "2025.11.22", "en": "Nov 22, 2025" },
+      "title": { "zh": "魔搭社区开发者嘉年华 · 支付宝 MCP 黑客松", "en": "ModelScope Carnival · Alipay MCP Hackathon" },
+      "note": { "zh": "第一次参加黑客松。", "en": "First hackathon ever." },
+      "type": { "zh": "参赛者", "en": "Participant" }
     },
     {
-      "date": {
-        "zh": "2025.11.30",
-        "en": "Nov 30, 2025"
-      },
-      "title": {
-        "zh": "Way to AGI 上海站",
-        "en": "Way to AGI Shanghai"
-      },
-      "note": {
-        "zh": "全球 30+ 城市联动，泰国清迈联动，第二次参加黑客松",
-        "en": "A 30+ city global event connected with Chiang Mai, Thailand; second hackathon experience"
-      },
-      "type": {
-        "zh": "参赛者",
-        "en": "Participant"
-      }
+      "date": { "zh": "2025.11.30", "en": "Nov 30, 2025" },
+      "title": { "zh": "Way to AGI 上海站", "en": "Way to AGI Shanghai" },
+      "note": { "zh": "全球 30+ 城市联动、清迈联动，第二次参加。", "en": "30+ cities worldwide, linked with Chiang Mai. Second hackathon." },
+      "type": { "zh": "参赛者", "en": "Participant" }
     },
     {
-      "date": {
-        "zh": "2026.01.08",
-        "en": "Jan 8, 2026"
-      },
-      "title": {
-        "zh": "浙江工商大学 AI 应用创新大赛",
-        "en": "ZJGSU AI Application Innovation Competition"
-      },
-      "note": {
-        "zh": "信电学院人工智能学院赛事",
-        "en": "Competition hosted by the School of Information Engineering and AI"
-      },
-      "type": {
-        "zh": "一等奖",
-        "en": "First Prize"
-      },
+      "date": { "zh": "2026.01.08", "en": "Jan 8, 2026" },
+      "title": { "zh": "浙商大信电·人工智能学院 AI 应用创新大赛", "en": "ZJGSU AI Application Innovation Competition" },
+      "note": { "zh": "一等奖。", "en": "First Prize." },
+      "type": { "zh": "一等奖", "en": "First Prize" },
       "award": true
     },
     {
-      "date": {
-        "zh": "2026.01.16 - 01.18",
-        "en": "Jan 16 - 18, 2026"
-      },
-      "title": {
-        "zh": "环球黑客松杭州站",
-        "en": "Global Hackathon Hangzhou"
-      },
-      "note": {
-        "zh": "志愿者 + 参赛者双重身份",
-        "en": "Served as both volunteer and participant"
-      },
-      "type": {
-        "zh": "志愿者 / 参赛者",
-        "en": "Volunteer / Participant"
-      }
+      "date": { "zh": "2026.01.16 - 01.18", "en": "Jan 16 - 18, 2026" },
+      "title": { "zh": "环球黑客松 杭州站", "en": "Global Hackathon Hangzhou" },
+      "note": { "zh": "志愿者 + 参赛者双重身份。", "en": "Both volunteer and participant." },
+      "type": { "zh": "志愿者 / 参赛者", "en": "Volunteer / Participant" }
     },
     {
-      "date": {
-        "zh": "2026.01.22",
-        "en": "Jan 22, 2026"
-      },
-      "title": {
-        "zh": "百度千帆 Agent 训练营",
-        "en": "Baidu Qianfan Agent Bootcamp"
-      },
-      "note": {
-        "zh": "最佳技术奖",
-        "en": "Best Technology Award"
-      },
-      "type": {
-        "zh": "最佳技术奖",
-        "en": "Best Tech Award"
-      },
+      "date": { "zh": "2026.01.22", "en": "Jan 22, 2026" },
+      "title": { "zh": "百度千帆 Agent 训练营", "en": "Baidu Qianfan Agent Bootcamp" },
+      "note": { "zh": "最佳技术奖。", "en": "Best Technology Award." },
+      "type": { "zh": "最佳技术奖", "en": "Best Tech Award" },
       "award": true
     },
     {
-      "date": {
-        "zh": "2026.01.23 - 01.25",
-        "en": "Jan 23 - 25, 2026"
-      },
-      "title": {
-        "zh": "上海黑客松 Less is More",
-        "en": "Shanghai Hackathon: Less is More"
-      },
-      "note": {
-        "zh": "志愿者 + 参赛者",
-        "en": "Volunteer and participant"
-      },
-      "type": {
-        "zh": "志愿者 / 参赛者",
-        "en": "Volunteer / Participant"
-      }
+      "date": { "zh": "2026.01.23 - 01.25", "en": "Jan 23 - 25, 2026" },
+      "title": { "zh": "上海黑客松 Less is More", "en": "Shanghai Hackathon: Less is More" },
+      "note": { "zh": "志愿者 + 参赛者。", "en": "Volunteer and participant." },
+      "type": { "zh": "志愿者 / 参赛者", "en": "Volunteer / Participant" }
     },
     {
-      "date": {
-        "zh": "2026.01.31 - 02.02",
-        "en": "Jan 31 - Feb 2, 2026"
-      },
-      "title": {
-        "zh": "南京模法学院 S2 以赛促产黑客松",
-        "en": "Nanjing Mofa Academy S2 Production-driven Hackathon"
-      },
-      "note": {
-        "zh": "参与赛事服务与现场支持",
-        "en": "Supported event operations and on-site service"
-      },
-      "type": {
-        "zh": "志愿者",
-        "en": "Volunteer"
-      }
+      "date": { "zh": "2026.01.31 - 02.02", "en": "Jan 31 - Feb 2, 2026" },
+      "title": { "zh": "南京模法学院 S2 · 以赛促产黑客松", "en": "Nanjing Mofa Academy S2 Hackathon" },
+      "note": { "zh": "赛事服务与现场支持。", "en": "Event service and on-site support." },
+      "type": { "zh": "志愿者", "en": "Volunteer" }
     },
     {
-      "date": {
-        "zh": "2026.02.07 - 02.08",
-        "en": "Feb 7 - 8, 2026"
-      },
-      "title": {
-        "zh": "全国 10 城联动汤泉黑客松太原站",
-        "en": "10-city Hot Spring Hackathon, Taiyuan"
-      },
-      "note": {
-        "zh": "第一次从志愿者转变为管理者视角",
-        "en": "First time shifting from volunteer to organizer perspective"
-      },
-      "type": {
-        "zh": "主办方负责人",
-        "en": "Organizer Lead"
-      }
+      "date": { "zh": "2026.02.07 - 02.08", "en": "Feb 7 - 8, 2026" },
+      "title": { "zh": "全国 10 城联动 汤泉黑客松 · 太原站", "en": "10-City Hot Spring Hackathon · Taiyuan" },
+      "note": { "zh": "第一次从志愿者转变为管理者视角。", "en": "First shift from volunteer to organizer." },
+      "type": { "zh": "主办方负责人", "en": "Organizer Lead" }
     },
     {
-      "date": {
-        "zh": "2026.03.07 - 03.08",
-        "en": "Mar 7 - 8, 2026"
-      },
-      "title": {
-        "zh": "中国高校联盟 AI Hackathon Tour 浙大线下复赛",
-        "en": "China University AI Hackathon Tour, ZJU Offline Semifinal"
-      },
-      "note": {
-        "zh": "高校联赛物资准备与协办支持",
-        "en": "Prepared competition materials and supported event coordination"
-      },
-      "type": {
-        "zh": "协办方",
-        "en": "Co-organizer"
-      }
+      "date": { "zh": "2026.03.07 - 03.08", "en": "Mar 7 - 8, 2026" },
+      "title": { "zh": "中国高校联盟 AI Hackathon Tour · 浙大复赛", "en": "China University AI Hackathon Tour · ZJU Semifinal" },
+      "note": { "zh": "物资准备与线下协办。", "en": "Materials and offline co-organizing." },
+      "type": { "zh": "协办方", "en": "Co-organizer" }
     },
     {
-      "date": {
-        "zh": "2026.03.14 - 03.15",
-        "en": "Mar 14 - 15, 2026"
-      },
-      "title": {
-        "zh": "中国高校联盟 AI Hackathon Tour 西安交通大学站",
-        "en": "China University AI Hackathon Tour, Xi'an Jiaotong University"
-      },
-      "note": {
-        "zh": "线下复赛协办方",
-        "en": "Co-organized the offline semifinal"
-      },
-      "type": {
-        "zh": "协办方",
-        "en": "Co-organizer"
-      }
+      "date": { "zh": "2026.03.14 - 03.15", "en": "Mar 14 - 15, 2026" },
+      "title": { "zh": "中国高校联盟 AI Hackathon Tour · 西安交大", "en": "China University AI Hackathon Tour · XJTU" },
+      "note": { "zh": "线下复赛协办方。", "en": "Co-organized the offline semifinal." },
+      "type": { "zh": "协办方", "en": "Co-organizer" }
     },
     {
-      "date": {
-        "zh": "2026.03.28",
-        "en": "Mar 28, 2026"
-      },
-      "title": {
-        "zh": "GDPS Astron 产业智变黑客松",
-        "en": "GDPS Astron Industrial Intelligence Hackathon"
-      },
-      "note": {
-        "zh": "一等奖",
-        "en": "First Prize"
-      },
-      "type": {
-        "zh": "一等奖",
-        "en": "First Prize"
-      },
+      "date": { "zh": "2026.03.27 - 03.29", "en": "Mar 27 - 29, 2026" },
+      "title": { "zh": "GDPS 上海全球开发者先锋大会", "en": "GDPS Global Developer Pioneer Conference" },
+      "note": { "zh": "大会志愿者服务。", "en": "Conference volunteer service." },
+      "type": { "zh": "志愿者", "en": "Volunteer" }
+    },
+    {
+      "date": { "zh": "2026.03.28", "en": "Mar 28, 2026" },
+      "title": { "zh": "GDPS Astron 产业智变黑客松", "en": "GDPS Astron Industrial Intelligence Hackathon" },
+      "note": { "zh": "一等奖。", "en": "First Prize." },
+      "type": { "zh": "一等奖", "en": "First Prize" },
       "award": true
     },
     {
-      "date": {
-        "zh": "2026.03.29",
-        "en": "Mar 29, 2026"
-      },
-      "title": {
-        "zh": "上海徐汇 Agent 进化酒馆黑客松",
-        "en": "Shanghai Xuhui Agent Evolution Tavern Hackathon"
-      },
-      "note": {
-        "zh": "最佳人气奖",
-        "en": "Best Popularity Award"
-      },
-      "type": {
-        "zh": "最佳人气奖",
-        "en": "Popularity Award"
-      },
+      "date": { "zh": "2026.03.29", "en": "Mar 29, 2026" },
+      "title": { "zh": "商汤龙虾节 · SenseAudio & AudioClaw 技能创新赛", "en": "SenseTime · SenseAudio & AudioClaw Challenge" },
+      "note": { "zh": "多场景 Skills 创新赛二等奖。", "en": "Second Prize, multi-scenario Skills challenge." },
+      "type": { "zh": "二等奖", "en": "Second Prize" },
       "award": true
     },
     {
-      "date": {
-        "zh": "2026.04.09",
-        "en": "Apr 9, 2026"
-      },
-      "title": {
-        "zh": "小红书黑客松巅峰赛",
-        "en": "Xiaohongshu Hackathon Finals"
-      },
-      "note": {
-        "zh": "志愿者工作人员 + 参赛者",
-        "en": "Event staff, volunteer, and participant"
-      },
-      "type": {
-        "zh": "工作人员 / 参赛者",
-        "en": "Staff / Participant"
-      }
-    },
-    {
-      "date": {
-        "zh": "2026.04.23",
-        "en": "Apr 23, 2026"
-      },
-      "title": {
-        "zh": "春潮 Spring 深圳 OpenClaw 黑客松",
-        "en": "Spring Shenzhen OpenClaw Hackathon"
-      },
-      "note": {
-        "zh": "参与 OpenClaw 生态相关实践",
-        "en": "Participated in OpenClaw ecosystem practice"
-      },
-      "type": {
-        "zh": "参赛者",
-        "en": "Participant"
-      }
-    },
-    {
-      "date": {
-        "zh": "2026.05.01",
-        "en": "May 1, 2026"
-      },
-      "title": {
-        "zh": "南京 Flux 南客松 S2",
-        "en": "Nanjing Flux Hackathon S2"
-      },
-      "note": {
-        "zh": "Life's Short, Play More 赛道银奖",
-        "en": "Silver Award in the \"Life's Short, Play More\" track"
-      },
-      "type": {
-        "zh": "银奖",
-        "en": "Silver Award"
-      },
+      "date": { "zh": "2026.03.29", "en": "Mar 29, 2026" },
+      "title": { "zh": "上海徐汇 Agent 进化酒馆黑客松", "en": "Shanghai Xuhui Agent Evolution Tavern" },
+      "note": { "zh": "最佳人气奖。", "en": "Best Popularity Award." },
+      "type": { "zh": "最佳人气奖", "en": "Popularity Award" },
       "award": true
+    },
+    {
+      "date": { "zh": "2026.04.09", "en": "Apr 9, 2026" },
+      "title": { "zh": "小红书黑客松巅峰赛", "en": "Xiaohongshu Hackathon Finals" },
+      "note": { "zh": "工作人员 + 参赛者。", "en": "Staff and participant." },
+      "type": { "zh": "工作人员 / 参赛者", "en": "Staff / Participant" }
+    },
+    {
+      "date": { "zh": "2026.04.23", "en": "Apr 23, 2026" },
+      "title": { "zh": "春潮 Spring · 深圳 OpenClaw 黑客松", "en": "Spring · Shenzhen OpenClaw Hackathon" },
+      "note": { "zh": "OpenClaw 生态实践，纯参赛者身份。", "en": "OpenClaw ecosystem practice as a pure participant." },
+      "type": { "zh": "参赛者", "en": "Participant" }
+    },
+    {
+      "date": { "zh": "2026.05.01", "en": "May 1, 2026" },
+      "title": { "zh": "南京 Flux 南客松 S2", "en": "Nanjing Flux Hackathon S2" },
+      "note": { "zh": "“Life's Short, Play More” 赛道银奖。", "en": "Silver Award, \"Life's Short, Play More\" track." },
+      "type": { "zh": "银奖", "en": "Silver Award" },
+      "award": true
+    },
+    {
+      "date": { "zh": "2026.05.31", "en": "May 31, 2026" },
+      "title": { "zh": "上海外滩 FTC · 繁星计划 FunSkills", "en": "Shanghai Bund FTC · FunSkills" },
+      "note": { "zh": "初赛 + 决赛工作人员。", "en": "Staff for both qualifier and final." },
+      "type": { "zh": "工作人员", "en": "Staff" }
+    },
+    {
+      "date": { "zh": "2026.06.12", "en": "Jun 12, 2026" },
+      "title": { "zh": "浙商大信电·人工智能学院 首届 AI 黑客松大赛", "en": "ZJGSU First AI Hackathon" },
+      "note": { "zh": "宣传落地设计，把自己办成主场。", "en": "Launch & design — bringing it home to campus." },
+      "type": { "zh": "主办方", "en": "Organizer" }
     }
   ]
 }

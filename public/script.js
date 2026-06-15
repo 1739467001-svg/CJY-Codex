@@ -13,6 +13,7 @@ const previewKicker = document.querySelector("#preview-kicker");
 const previewMeta = document.querySelector("#preview-meta");
 const previewFrame = document.querySelector("#preview-frame");
 const previewFrameWrap = document.querySelector("#preview-frame-wrap");
+const previewPlaceholder = document.querySelector("#preview-placeholder");
 const previewOpenLink = document.querySelector("#preview-open-link");
 const filterButtons = [...document.querySelectorAll(".filter-chip")];
 const languageToggle = document.querySelector("#language-toggle");
@@ -47,11 +48,11 @@ const translations = {
       identityValue: "系统开发贡献者、AI 助教、黑客松组织者与参赛者"
     },
     metrics: {
-      activities: "AI 活动与黑客松参与",
-      scenes: "校园智能体与系统场景",
-      training: "培训、助教、课程探索节点",
+      activities: "AI 黑客松与活动",
+      scenes: "上线作品与数字孪生",
+      training: "赛事奖项",
       fullChainTitle: "全链路",
-      fullChainText: "参赛者 / 志愿者 / 工作人员 / 负责人"
+      fullChainText: "参赛者 → 主办方"
     },
     intro: {
       title: "把 AI 从“工具演示”推进到真实教育与校园系统。",
@@ -75,19 +76,19 @@ const translations = {
     },
     filters: {
       all: "全部",
+      twin: "数字孪生",
       campus: "校园系统",
-      education: "AI 教育",
       agent: "智能体",
       hackathon: "黑客松"
     },
     classroom: {
       title: "未来课堂不是一个概念，是一组正在被接线的系统。",
-      item1Title: "课程智能体",
-      item1Text: "探索“小龙虾课程”，让会议室预约、智慧就业、图书馆管理、象棋指导等场景进入课程实验。",
-      item2Title: "AI 助教",
-      item2Text: "2026.5.15-6.12 浙江工商大学双通班研究生 AI 助教，把生成式 AI 引入学习支持链路。",
-      item3Title: "组织培训",
-      item3Text: "面向青年创业协会、企业 HR 与校园群体，进行 AI Agent 与智能体搭建培训。"
+      item1Title: "小龙虾课程矩阵",
+      item1Text: "与诸葛导师共同探索“小龙虾课程”，把会议室预约虾、智慧就业虾、图书馆管理虾、象棋指导虾等场景接入课程实验。",
+      item2Title: "研究生 AI 助教",
+      item2Text: "2026.5.15-6.15 浙江工商大学双通班研究生 AI 助教，把生成式 AI 引入学习支持链路。",
+      item3Title: "企业与校园培训",
+      item3Text: "2026.3.22 浙江省青年创业协会、2026.4.27 浙江医药股份 HR——面向企业与校园群体的 AI Agent 智能体搭建培训。"
     },
     timeline: {
       title: "从参赛者到组织者的行动轨迹"
@@ -110,7 +111,9 @@ const translations = {
     preview: {
       title: "作品预览",
       placeholderTitle: "预览即将上线",
-      placeholderText: "该作品的内置预览正在接入，敬请期待。"
+      placeholderText: "该作品的内置预览正在接入，敬请期待。",
+      externalTitle: "请在新窗口打开",
+      externalText: "这是一个 http 部署的项目，浏览器出于安全策略不允许嵌入到 https 页面中。点击右上角 ↗ 在新窗口打开。"
     },
     aria: {
       mainNav: "主导航",
@@ -160,11 +163,11 @@ const translations = {
       identityValue: "System contributor, AI teaching assistant, hackathon organizer and participant"
     },
     metrics: {
-      activities: "AI events and hackathons",
-      scenes: "Campus agent and system scenarios",
-      training: "Training, TA, and course exploration nodes",
+      activities: "AI hackathons & events",
+      scenes: "Live builds & digital twins",
+      training: "Competition awards",
       fullChainTitle: "Full Chain",
-      fullChainText: "Participant / Volunteer / Staff / Organizer"
+      fullChainText: "Participant → Organizer"
     },
     intro: {
       title: "Moving AI from tool demos into real education and campus systems.",
@@ -188,19 +191,19 @@ const translations = {
     },
     filters: {
       all: "All",
+      twin: "Digital Twin",
       campus: "Campus",
-      education: "AI Education",
       agent: "Agents",
       hackathon: "Hackathons"
     },
     classroom: {
       title: "The future classroom is not a slogan; it is a set of systems being wired together.",
-      item1Title: "Course Agents",
-      item1Text: "Exploring OpenClaw course scenarios where meeting-room booking, smart employment, library management, and chess coaching enter course experiments.",
-      item2Title: "AI Teaching Assistant",
-      item2Text: "From May 15 to June 12, 2026, served as an AI teaching assistant for ZJGSU graduate students, bringing generative AI into learning support.",
-      item3Title: "Training Programs",
-      item3Text: "Delivered AI Agent and agent-building training for youth entrepreneurship groups, corporate HR teams, and campus communities."
+      item1Title: "OpenClaw Course Cluster",
+      item1Text: "Exploring OpenClaw courses with Mentor Zhuge — wiring meeting-room booking, smart employment, library management, and chess-coaching shrimp agents into course experiments.",
+      item2Title: "Graduate AI Teaching Assistant",
+      item2Text: "May 15 - Jun 15, 2026: AI teaching assistant for ZJGSU graduate students, bringing generative AI into the learning-support loop.",
+      item3Title: "Industry & Campus Training",
+      item3Text: "AI Agent building workshops for industry and campus — Zhejiang Youth Entrepreneurs (Mar 22) and Zhejiang Medicine HR (Apr 27, 2026)."
     },
     timeline: {
       title: "From participant to organizer: a field trajectory"
@@ -223,7 +226,9 @@ const translations = {
     preview: {
       title: "Work Preview",
       placeholderTitle: "Preview coming soon",
-      placeholderText: "The embedded preview for this work is being wired up — stay tuned."
+      placeholderText: "The embedded preview for this work is being wired up — stay tuned.",
+      externalTitle: "Open in a new window",
+      externalText: "This project is served over http, which browsers block from embedding inside an https page. Use the ↗ button to open it in a new tab."
     },
     aria: {
       mainNav: "Main navigation",
@@ -473,16 +478,31 @@ function openPreview(work) {
   previewKicker.textContent = localized(work.date);
   previewMeta.innerHTML = tagMarkup(work.tags);
 
-  if (work.url) {
-    previewFrame.src = work.url;
-    previewOpenLink.href = work.url;
+  const url = work.url || "";
+  const embeddable = /^https:\/\//i.test(url);
+  const placeholderTitle = previewPlaceholder?.querySelector("strong");
+  const placeholderText = previewPlaceholder?.querySelector("span");
+
+  if (url && embeddable) {
+    previewFrame.src = url;
+    previewOpenLink.href = url;
     previewOpenLink.removeAttribute("aria-disabled");
     previewFrameWrap.classList.add("has-url");
+  } else if (url) {
+    // http / mixed-content: an https page cannot embed it — offer an external open instead.
+    previewFrame.removeAttribute("src");
+    previewOpenLink.href = url;
+    previewOpenLink.removeAttribute("aria-disabled");
+    previewFrameWrap.classList.remove("has-url");
+    if (placeholderTitle) placeholderTitle.textContent = t("preview.externalTitle");
+    if (placeholderText) placeholderText.textContent = t("preview.externalText");
   } else {
     previewFrame.removeAttribute("src");
     previewOpenLink.href = "#";
     previewOpenLink.setAttribute("aria-disabled", "true");
     previewFrameWrap.classList.remove("has-url");
+    if (placeholderTitle) placeholderTitle.textContent = t("preview.placeholderTitle");
+    if (placeholderText) placeholderText.textContent = t("preview.placeholderText");
   }
 
   previewDock.classList.add("open");
