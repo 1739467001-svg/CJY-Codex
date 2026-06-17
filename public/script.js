@@ -296,6 +296,11 @@ function t(path) {
   return path.split(".").reduce((value, key) => value?.[key], translations[currentLanguage]) ?? path;
 }
 
+// Phone-sized or coarse-pointer devices: embedded iframes are unreliable here.
+function isHandheld() {
+  return window.matchMedia("(max-width: 760px), (pointer: coarse)").matches;
+}
+
 function localized(value) {
   if (Array.isArray(value)) {
     return value;
@@ -392,7 +397,16 @@ function renderWorks(filter = activeFilter) {
 
   [...workGrid.querySelectorAll(".work-card")].forEach((card) => {
     const work = visibleWorks[Number(card.dataset.index)];
-    card.addEventListener("click", () => openPreview(work));
+    card.addEventListener("click", () => {
+      // On phones the in-page iframe is unreliable for heavy external apps
+      // (WebGL twins, X-Frame-Options, http mixed-content), so open the real
+      // work in a new tab. Desktop keeps the embedded preview.
+      if (work.url && isHandheld()) {
+        window.open(work.url, "_blank", "noopener");
+        return;
+      }
+      openPreview(work);
+    });
   });
 
   observeReveals(workGrid.querySelectorAll(".work-card"));
